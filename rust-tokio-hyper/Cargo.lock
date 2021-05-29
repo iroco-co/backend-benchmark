@@ -177,6 +177,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "contact-server"
+version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "bytes",
+ "cargo-watch",
+ "futures",
+ "hyper",
+ "route-recognizer",
+ "serde",
+ "serde_json",
+ "test-context",
+ "tokio",
+ "tokio-postgres",
+ "tokio-test",
+]
+
+[[package]]
 name = "cpufeatures"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1079,24 +1097,6 @@ name = "route-recognizer"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "824172f0afccf3773c3905f5550ac94572144efe0deaf49a1f22bbca188d193e"
-
-[[package]]
-name = "rust-minimal-web-service-hyper"
-version = "0.1.0"
-dependencies = [
- "async-trait",
- "bytes",
- "cargo-watch",
- "futures",
- "hyper",
- "route-recognizer",
- "serde",
- "serde_json",
- "test-context",
- "tokio",
- "tokio-postgres",
- "tokio-test",
-]
 
 [[package]]
 name = "ryu"
