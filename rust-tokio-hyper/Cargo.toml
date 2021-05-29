@@ -1,0 +1,28 @@
+[package]
+name = "contact-server"
+version = "0.1.0"
+
+[dependencies]
+futures = { version = "0.3.14", default-features = false, features = ["async-await"] }
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "rt"] }
+serde = {version = "1.0", features = ["derive"] }
+tokio-postgres = "0.7"
+serde_json = "1.0"
+route-recognizer = "0.3"
+bytes = "1"
+async-trait = "0.1"
+
+[dev-dependencies]
+tokio-test = "*"
+test-context = "*"
+cargo-watch = "*"
+
+[profile.dev]
+debug = 0
+
+[profile.test]
+debug = 0
+
+[profile.release]
+panic = 'abort'
