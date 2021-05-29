@@ -1,15 +1,9 @@
-# rust-minimal-web-service-hyper
+# rust implementation
 
-An example of a minimal web service in Rust using hyper
+web service in Rust using hyper and postgresql tokio
 
-Run with `make dev`
+Run with 
 
-URLs to call:
-
-```bash
-curl http://localhost:8080/test
-
-curl http://localhost:8080/params/1234
-
-curl -X POST http://localhost:8080/send -d '{"name": "chip", "active": true }'
+```
+cargo run --release
 ```
