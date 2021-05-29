@@ -1,6 +1,3 @@
-import asyncio
-import json
-
 from aiopg import create_pool
 from fastapi import FastAPI
 
@@ -25,7 +22,7 @@ async def root():
 
 @app.get("/contacts")
 async def contacts():
-    return [c.__dict__ for c in (await repository.get_all())]
+    return await repository.get_all()
 
 
 @app.get("/contacts/{contact_id}")
