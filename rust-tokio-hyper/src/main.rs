@@ -27,15 +27,15 @@ async fn main() {
     router.get("/contacts/:id", Box::new(handler::get_contact));
 
     let shared_router = Arc::new(router);
+    let app_state = Arc::new(AppState {
+        repository: Arc::new(block_on(PgsqlRepository::new("host=postgresql user=classe password=classe dbname=classe")))
+    });
     let new_service = make_service_fn(move |_| {
-        let app_state = Arc::new(AppState {
-            repository: Arc::new(block_on(PgsqlRepository::new("host=postgresql user=classe password=classe dbname=classe")))
-        });
-
+        let app_state_capture = app_state.clone();
         let router_capture = shared_router.clone();
         async {
             Ok::<_, Error>(service_fn(move |req| {
-                route(router_capture.clone(), req, Arc::clone(&app_state))
+                route(router_capture.clone(), req, app_state_capture.clone())
             }))
         }
     });
