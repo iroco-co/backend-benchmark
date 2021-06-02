@@ -2,7 +2,7 @@ Cette page a pour but de résumer les tests comparatifs entre un serveur Python 
 
 Nous avons fait deux applications identiques qui font un accès à une base de données de contacts. 
 
-Nous utilisons l'outil apache [ab](https://jmeter.apache.org/) qui permet d'effectuer un nombre de requêtes HTML donné en argument. ab permet aussi de lancer des requêtes en concurrence. La machine utilisée pour les tests permet de lancer 4 requêtes en concurrence.
+Nous utilisons l'outil apache [ab](https://httpd.apache.org/docs/2.4/fr/programs/ab.html) qui permet d'effectuer un nombre de requêtes HTML donné en argument. ab permet aussi de lancer des requêtes en concurrence. La machine utilisée pour les tests permet de lancer 4 requêtes en concurrence.
 
 Le scénario de test est l'accès aux données d'un contact sur la page locale : localhost:8080/contacts/1.
 
