@@ -1,0 +1,57 @@
+[dev@irocoenv]:~$ date --rfc-3339=ns; ab -n 25000000 -c 4 localhost:8080/conta 
+cts/1; date --rfc-3339=ns                                                      
+2021-05-31 14:45:40.716862519+02:00
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>                        
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/       
+Licensed to The Apache Software Foundation, http://www.apache.org/             
+
+Benchmarking localhost (be patient)
+Completed 2500000 requests
+Completed 5000000 requests
+Completed 7500000 requests
+Completed 10000000 requests
+Completed 12500000 requests
+Completed 15000000 requests
+Completed 17500000 requests
+Completed 20000000 requests                                                                                                                            [7/188]
+Completed 22500000 requests
+Completed 25000000 requests
+Finished 25000000 requests
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /contacts/1
+Document Length:        101 bytes
+
+Concurrency Level:      4
+Time taken for tests:   5968.241 seconds                                       
+Complete requests:      25000000
+Failed requests:        0
+Total transferred:      4450000000 bytes                                       
+HTML transferred:       2525000000 bytes                                       
+Requests per second:    4188.84 [#/sec] (mean)                                 
+Time per request:       0.955 [ms] (mean)                                      
+Time per request:       0.239 [ms] (mean, across all concurrent requests)      
+Transfer rate:          728.14 [Kbytes/sec] received                           
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max                                    
+Connect:        0    0   0.1      0      22                                    
+Processing:     0    1   0.3      1      33                                    
+Waiting:        0    1   0.3      1      33                                    
+Total:          0    1   0.3      1      33                                    
+
+Percentage of the requests served within a certain time (ms)                   
+  50%      1                           
+  66%      1                           
+  75%      1                           
+  80%      1       
+  90%      1                           
+  95%      1                           
+  98%      1                           
+  99%      2                           
+ 100%     33 (longest request)
+2021-05-31 16:26:17.468412414+02:00

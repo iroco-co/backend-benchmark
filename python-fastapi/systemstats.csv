@@ -1,0 +1,6 @@
+"Dstat 0.8.0 CSV output"
+"Author:","Dag Wieers <dag@wieers.com>",,,,"URL:","http://dag.wieers.com/home-made/dstat/"
+"Host:","irocoenv",,,,"User:","dev"
+"Cmdline:","dstat -ta --top-cpu --noheader --output systemstats.csv",,,,"Date:","01 Jun 2021 16:18:47 CEST"
+"system","total cpu usage",,,,,"dsk/total",,"net/total",,"paging",,"system",,"most expensive"
+"time","usr","sys","idl","wai","stl","read","writ","recv","send","in","out","int","csw","cpu process"

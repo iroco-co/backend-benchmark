@@ -1,0 +1,58 @@
+date --rfc-3339=ns; ab -n 3000000 -c 4 localhost:8000/contacts/1; date --rfc-3339=ns                                                                                                                                      
+2021-06-02 08:51:39.394211203+02:00                                                                                                                           
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>                                                                                                       
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/                                                                                      
+Licensed to The Apache Software Foundation, http://www.apache.org/                                                                                            
+                                                                                                                                                              
+Benchmarking localhost (be patient)                                                                                                                           
+Completed 300000 requests                                                                                                                                     
+Completed 600000 requests                                                                                                                                     
+Completed 900000 requests                                                                                                                                     
+Completed 1200000 requests                                                                                                                                    
+Completed 1500000 requests                                                                                                                                    
+Completed 1800000 requests                                                                                                                                    
+Completed 2100000 requests                                                                                                                                    
+Completed 2400000 requests                                                                                                                                    
+Completed 2700000 requests                                                                                                                                    
+Completed 3000000 requests                                                                                                                                    
+Finished 3000000 requests                                                                                                                                     
+                                                                                                                                                              
+                                                                                                                                                              
+
+Server Software:        uvicorn
+Server Hostname:        localhost
+Server Port:            8000
+
+Document Path:          /contacts/1
+Document Length:        101 bytes
+
+Concurrency Level:      4
+Time taken for tests:   2301.792 seconds
+Complete requests:      3000000
+Failed requests:        0
+Total transferred:      681000000 bytes
+HTML transferred:       303000000 bytes
+Requests per second:    1303.33 [#/sec] (mean)
+Time per request:       3.069 [ms] (mean)
+Time per request:       0.767 [ms] (mean, across all concurrent requests)
+Transfer rate:          288.92 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       8
+Processing:     1    3   0.7      3      35
+Waiting:        0    3   0.6      3      35
+Total:          1    3   0.7      3      35
+
+Percentage of the requests served within a certain time (ms)
+  50%      3
+  66%      3
+  75%      3
+  80%      3
+  90%      3
+  95%      4
+  98%      4
+  99%      5
+ 100%     35 (longest request)
+2021-06-02 09:30:08.627299307+02:00
+
