@@ -2,7 +2,7 @@ import os
 
 from setuptools import setup, find_packages
 
-setup(name='classe',
+setup(name='contact-server',
       version='0.1',
       description="serveur de contact starlet/fastapi",
       use_pipfile=True,
