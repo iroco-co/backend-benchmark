@@ -1,7 +1,7 @@
 from aiopg import create_pool
 from fastapi import FastAPI
 
-from server.repository import Repository
+from contactserver.repository import Repository
 
 
 app = FastAPI()

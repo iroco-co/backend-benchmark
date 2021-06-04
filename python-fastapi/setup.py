@@ -1,5 +1,3 @@
-import os
-
 from setuptools import setup, find_packages
 
 setup(name='contact-server',
@@ -16,6 +14,7 @@ setup(name='contact-server',
       url='http://github.com/',
       setup_requires=['setuptools-pipfile'],
       include_package_data=True,
+      packages=find_packages(exclude=('*.tests', '*.tests.*')),
       zip_safe=False,
       test_suite="nose.collector",
       )

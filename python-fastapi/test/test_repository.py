@@ -1,7 +1,7 @@
 import asynctest
 from aiopg import create_pool
 
-from server.repository import Repository, Contact
+from contactserver.repository import Repository, Contact
 
 
 class TestRepository(asynctest.TestCase):
