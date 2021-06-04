@@ -10,16 +10,17 @@ Voici les informations du système utilisé :
 
 La machine utilisée pour les tests permet de lancer 4 requêtes en concurrence. Des informations détaillées de la machine utilisée sont disponibles dans le fichier [cpuinfo](./cpuinfo). 
 
-Le scénario de test est l'accès aux données d'un contact sur la page locale : localhost:8080/contacts/1.
+Nous avons avons ajouté un contact à la base de données. Ainsi, le scénario de test est l'accès aux données du contact sur la page locale : localhost:8000/contacts/1.
 
 Les logs du serveur Python ont été retirés avec l'option `--no-access-log` pour améliorer sa performance et être identique au serveur Rust.
+
 ## 1er tir
 
 Commande exécutée : `ab -n 10000 -c 4 localhost:8000/contacts/1`
 
 10 000 requêtes par concurrence soit 40 000 requêtes.
 
-Nous obtenons une moyenne de  0.953 ms/requête pour Rust et 3.286 ms/requête pour Python.
+Nous obtenons une moyenne de 0.953 ms/requête pour Rust et 3.286 ms/requête pour Python.
 
 ![diagramme](01-run/diagram.png)
 
