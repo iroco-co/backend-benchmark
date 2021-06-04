@@ -40,7 +40,7 @@ async fn main() {
         }
     });
 
-    let addr = "0.0.0.0:8080".parse().expect("address creation works");
+    let addr = "0.0.0.0:8000".parse().expect("address creation works");
     let server = Server::bind(&addr).serve(new_service);
     println!("Listening on http://{}", addr);
     let _ = server.await;
