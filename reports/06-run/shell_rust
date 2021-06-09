@@ -1,0 +1,56 @@
+[dev@irocoenv]:~$ date --rfc-3339=ns; ab -n 500000 -c 4 http://192.168.1.79:8000/contacts/1; date --r[dev@irocoenv]:~$ date --rfc-3339=ns; ab -n 500000 -c 4 http://192.168.1.79:8000/contacts/1; date --rfc-3339=ns
+2021-06-09 15:14:44.228757921+02:00
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.1.79 (be patient)
+Completed 50000 requests
+Completed 100000 requests
+Completed 150000 requests
+Completed 200000 requests
+Completed 250000 requests
+Completed 300000 requests
+Completed 350000 requests
+Completed 400000 requests
+Completed 450000 requests
+Completed 500000 requests
+Finished 500000 requests
+
+
+Server Software:        
+Server Hostname:        192.168.1.79
+Server Port:            8000
+
+Document Path:          /contacts/1
+Document Length:        89 bytes
+
+Concurrency Level:      4
+Time taken for tests:   715.203 seconds
+Complete requests:      500000
+Failed requests:        0
+Total transferred:      82500000 bytes
+HTML transferred:       44500000 bytes
+Requests per second:    699.10 [#/sec] (mean)
+Time per request:       5.722 [ms] (mean)
+Time per request:       1.430 [ms] (mean, across all concurrent requests)
+Transfer rate:          112.65 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.2      1      10
+Processing:     2    5   0.5      5     135
+Waiting:        0    5   0.6      5     134
+Total:          3    6   0.5      6     136
+
+Percentage of the requests served within a certain time (ms)
+  50%      6
+  66%      6
+  75%      6
+  80%      6
+  90%      6
+  95%      6
+  98%      7
+  99%      7
+ 100%    136 (longest request)
+2021-06-09 15:26:40.611265010+02:00
