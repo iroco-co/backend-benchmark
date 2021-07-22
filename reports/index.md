@@ -10,7 +10,7 @@ Voici les informations du système utilisé :
 
 La machine utilisée pour les tests permet de lancer 4 requêtes en concurrence. Des informations détaillées de la machine utilisée sont disponibles dans le fichier [cpuinfo](./cpuinfo). 
 
-Nous avons avons ajouté un contact à la base de données. Ainsi, le scénario de test est l'accès aux données du contact sur la page locale : localhost:8000/contacts/1.
+Nous avons ajouté un contact à la base de données. Ainsi, le scénario de test est l'accès aux données du contact sur la page locale : localhost:8000/contacts/1.
 
 Les logs du serveur Python ont été retirés avec l'option `--no-access-log` pour améliorer sa performance et être identique au serveur Rust.
 
@@ -74,3 +74,12 @@ Commande exécutée : `ab -n 25000000 -c 4 localhost:8000/contacts/1`
 Nous essayons maintenant de voir les limites du serveur Rust en lui envoyant un très grand nombre de requêtes : 25 000 000/concurrence soit 100 000 000 requêtes. 
 
 Le serveur présente une nouvelle fois une moyenne similaire (0.955 ms/requête).
+
+## Ressources
+
+
+[Diagramme à barres](https://online.visual-paradigm.com/share.jsp?id=313435393639322d38)
+
+[Graphe CPU](https://online.visual-paradigm.com/share.jsp?id=313435393639322d32)
+
+[Graphe distribution](https://online.visual-paradigm.com/share.jsp?id=313435393639322d35)
