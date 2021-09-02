@@ -21,7 +21,7 @@ pub struct AppState {
     pub repository: Arc<PgsqlRepository>
 }
 
-#[tokio::main]
+#[tokio::main(flavor = "multi_thread", worker_threads = 8)]
 async fn main() {
     let mut router: Router = Router::new();
     router.get("/contacts/:id", Box::new(handler::get_contact));
