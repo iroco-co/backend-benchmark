@@ -28,7 +28,7 @@ async fn main() {
 
     let shared_router = Arc::new(router);
     let app_state = Arc::new(AppState {
-        repository: Arc::new(block_on(PgsqlRepository::new("host=postgresql user=classe password=classe dbname=classe")))
+        repository: Arc::new(block_on(PgsqlRepository::new("postgresql://classe:classe@postgresql/classe")))
     });
     let new_service = make_service_fn(move |_| {
         let app_state_capture = app_state.clone();
