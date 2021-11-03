@@ -28,7 +28,7 @@ async fn main() {
 
     let shared_router = Arc::new(router);
     let app_state = Arc::new(AppState {
-        repository: Arc::new(block_on(PgsqlRepository::new("postgresql://classe:classe@postgresql/classe")))
+        repository: Arc::new(block_on(PgsqlRepository::new("postgresql://iroco:iroco@postgresql/iroco")))
     });
     let new_service = make_service_fn(move |_| {
         let app_state_capture = app_state.clone();
@@ -40,7 +40,7 @@ async fn main() {
         }
     });
 
-    let addr = "0.0.0.0:8000".parse().expect("address creation works");
+    let addr = "0.0.0.0:3000".parse().expect("address creation works");
     let server = Server::bind(&addr).serve(new_service);
     println!("Listening on http://{}", addr);
     let _ = server.await;
